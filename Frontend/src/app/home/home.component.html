@@ -1,0 +1,55 @@
+<div class="main-container">
+    <div class="new-contact">
+        <h2>Agregar contacto</h2>
+        <form>
+            <input type="text" placeholder="Nombre" [(ngModel)]="contact.name" name="name" required />
+            <input type="text" placeholder="Apellido" [(ngModel)]="contact.lastName" name="lastName" required />
+            <input type="tel" placeholder="Teléfono fijo" [(ngModel)]="contact.landline" name="landline" required />
+            <input type="tel" placeholder="Celular" [(ngModel)]="contact.celular" name="celular" required />
+            <input type="email" placeholder="Correo" [(ngModel)]="contact.email" name="email" required />
+            <button (click)="createContact()">Agregar</button>
+        </form>
+    </div>
+
+    <div class="contact-list">
+        <h2>Tus contactos</h2>
+
+        <div class="contacts-container">
+            <div *ngFor="let person of contactos; let idx = index">
+            <p>
+                <strong>{{ person.name }} {{ person.lastName }}</strong><br/>
+                <span>Teléfono fijo: {{ person.landline }}</span><br/>
+                <span>Celular: {{ person.celular }}</span><br/>
+                <span>Correo: {{ person.email }}</span><br/>
+                <button class="button_edit" (click)="popupModifyContact(person, idx)">Editar</button>
+                <button class="button_delete" (click)="popupDeleteContact(idx)">Eliminar</button>
+            </p>
+            </div>
+        </div>
+
+        <div class="modal-edit" *ngIf="editPopupVisible">
+            <button class="close-panel" (click)="closePopup()">x</button>
+            <h3>Editar contacto</h3>
+                <form>
+                    <input type="text" placeholder="Nombre" [(ngModel)]="editarContacto.name" name="editName" required />
+                    <input type="text" placeholder="Apellido" [(ngModel)]="editarContacto.lastName" name="editLastName" required />
+                    <input type="tel" placeholder="Teléfono fijo" [(ngModel)]="editarContacto.landline" name="editLandline" required />
+                    <input type="tel" placeholder="Celular" [(ngModel)]="editarContacto.celular" name="editCelular" required />
+                    <input type="email" placeholder="Correo" [(ngModel)]="editarContacto.email" name="editEmail" required />
+                <button (click)="modifyContact()">Guardar cambios</button>
+            </form>
+        </div>
+
+        <div class="modal-delete" *ngIf="deletePopupVisible">
+                <p>¿Estás seguro de eliminar este contacto?</p>
+                <div class="modal-buttons">
+                <button class="confirm" (click)="deleteContact()">Sí</button>
+                <button class="cancel" (click)="cancelDeleteContact()">No</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="logout-container">
+    <button class="logout" (click)="logOut()">Cerrar sesión</button>
+</div>

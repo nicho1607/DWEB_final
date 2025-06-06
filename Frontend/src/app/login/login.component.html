@@ -1,0 +1,24 @@
+<div class="wrapper">
+    <div class="main-container">
+        <div class="container-grid">
+            
+            <h1 class="header">Tus contactos</h1>
+            
+            <label class="label" for="inputEmail">Correo:</label>
+            <div class="input">
+            <input type="email" id="inputEmail" [(ngModel)]="email" placeholder="Tu correo aquí">
+            </div>
+            
+            <label class="label" for="inputPassword">Contraseña:</label>
+            <div class="input">
+            <input type="password" id="inputPassword" [(ngModel)]="password" placeholder="Tu contraseña">
+            </div>
+            
+            <div class="btn-container">
+            <button class="btn-primary" (click)="login()">Iniciar sesión</button>
+            <button class="btn-secondary" (click)="goToRegister()">Registrarse</button>
+            </div>
+            
+        </div>
+    </div>
+</div>

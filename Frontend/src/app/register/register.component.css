@@ -1,0 +1,118 @@
+.register-background{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    padding: 1rem;
+}
+
+.register-container{
+    background: white;
+    padding: 2.5rem 5rem;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.9);
+    max-width: 600px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.register-header h1{
+    text-align: center;
+    color: #0d47a1;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.register-input {
+    margin-bottom: 1.2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.register-label {
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #0d47a1;
+}
+
+.register-input input {
+    padding: 0.75rem 1rem;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.register-input input:focus {
+    border-color: #0d47a1;
+    outline: none;
+    box-shadow: 0 0 8px #0d47a1aa;
+}
+
+.register-btns {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.register-btn-primary, .register-btn-secondary {
+    flex: 1;
+    padding: 0.85rem;
+    font-weight: 700;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.register-btn-primary {
+    background-color: #0d47a1;
+    color: white;
+}
+
+.register-btn-primary:hover {
+    background-color: #094a8a;
+}
+
+.register-btn-secondary {
+    background-color: #90a4ae;
+    color: white;
+}
+
+.register-btn-secondary:hover {
+    background-color: #607d8b;
+}
+
+.register-header p {
+    text-align: center;
+    color: #444;
+    font-size: 1rem;
+    margin: 0;
+}
+
+@media (max-width: 480px) {
+    .register-container {
+        padding: 1.5rem 1.5rem;
+        max-width: 100%;
+        margin: 0 1rem;
+    }
+
+    .register-btns {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .register-btn-primary, .register-btn-secondary {
+        width: 100%;
+    }
+    
+    .register-input input {
+        font-size: 0.95rem;
+    }
+
+    .register-header h1 {
+        font-size: 1.6rem;
+    }
+}

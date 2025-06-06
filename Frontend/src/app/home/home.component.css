@@ -1,0 +1,254 @@
+.main-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.new-contact, .contact-list {
+    align-items: center;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgb(0 0 0 / 0.1);
+    padding: 2rem;
+    width: 100%;
+    max-width: 480px;
+    margin-bottom: 2rem;
+}
+
+.contact-list {
+    display: flex;
+    gap: 2rem;
+    max-width: 900px;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    margin-top: 1.5rem;
+}
+
+
+.new-contact h2, .contact-list h2 {
+    margin-bottom: 1.5rem;
+    color: #0d47a1;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.new-contact form input,
+.modal-edit form input {
+    display: block;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1.2rem;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.new-contact form input:focus,
+.modal-edit form input:focus {
+    border-color: #0d47a1;
+    outline: none;
+    box-shadow: 0 0 8px #0d47a1aa;
+}
+
+.new-contact form button,
+.modal-edit form button {
+    width: 100%;
+    padding: 0.85rem;
+    background: #0d47a1;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.new-contact form button:hover,
+.modal-edit form button:hover {
+    background: #094a8a;
+}
+
+.contacts-container {
+    flex: 1 1 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-height: 360px;
+    overflow-y: auto;
+    padding-right: 8px;
+}
+
+.contacts-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-height: 360px;
+    overflow-y: auto;
+    padding-right: 8px;
+}
+
+.contacts-container p {
+    background: #e3f2fd;
+    padding: 1rem 1.2rem;
+    border-radius: 8px;
+    box-shadow: inset 0 0 8px #90caf9aa;
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+.contacts-container strong {
+    font-size: 1.15rem;
+    color: #0d47a1;
+}
+
+.button_edit,
+.button_delete {
+    margin-top: 0.7rem;
+    margin-right: 0.5rem;
+    padding: 0.4rem 1rem;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button_edit {
+    background-color: #1976d2;
+    color: white;
+}
+
+.button_edit:hover {
+    background-color: #1565c0;
+}
+
+.button_delete {
+    background-color: #e53935;
+    color: white;
+}
+
+.button_delete:hover {
+    background-color: #b71c1c;
+}
+
+.modal-edit, .modal-delete {
+    position: relative;
+    transform: none;
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
+    width: 100%;
+    max-width: 100%;
+}
+
+.modal-edit h3 {
+    margin-bottom: 1.5rem;
+    color: #0d47a1;
+    text-align: center;
+}
+
+.close-panel {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: #e0e0e0;
+    border: none;
+    border-radius: 10%;
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #0d47a1;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+}
+
+.close-panel:hover {
+    background-color: #0d47a1;
+    color: white;
+}
+
+.modal-delete p {
+    font-size: 1.1rem;
+    margin-bottom: 1.6rem;
+    text-align: center;
+    color: #444;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.modal-buttons button {
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.modal-buttons .confirm {
+    background-color: #e53935;
+    color: white;
+}
+
+.modal-buttons .confirm:hover {
+    background-color: #b71c1c;
+}
+
+.modal-buttons .cancel {
+    background-color: #90a4ae;
+    color: white;
+}
+
+.modal-buttons .cancel:hover {
+    background-color: #607d8b;
+}
+
+.logout-container{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.logout {
+    background: #0d47a1;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 0.75rem 2rem;
+    font-weight: 700;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-items: center;
+}
+
+.logout:hover {
+    background: #094a8a;
+}
+
+@media (max-width: 520px) {
+    .new-contact, .contact-list {
+        padding: 1.5rem 1rem;
+        width: 100%;
+    }
+
+    .contacts-container p {
+        font-size: 0.95rem;
+    }
+}

@@ -1,0 +1,6 @@
+html, body{
+    background: #000;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    overflow: auto;
+}

@@ -1,0 +1,41 @@
+<div class="register-background">
+    <div class="register-container">
+        <div class="register-header">
+            <h1>Registro</h1>
+            </div>
+
+            <div class="register-input">
+            <label for="firstName" class="register-label">Nombre:</label>
+            <input type="text" id="firstName" [(ngModel)]="firstName" placeholder="Ingresa tu nombre">
+            </div>
+
+            <div class="register-input">
+            <label for="lastName" class="register-label">Apellido:</label>
+            <input type="text" id="lastName" [(ngModel)]="lastName" placeholder="Ingresa tu apellido">
+            </div>
+
+            <div class="register-input">
+            <label for="email" class="register-label">Correo:</label>
+            <input type="email" id="email" [(ngModel)]="email" placeholder="ejemplo@correo.com">
+            </div>
+
+            <div class="register-input">
+            <label for="password" class="register-label">Contraseña:</label>
+            <input type="password" id="password" [(ngModel)]="password" placeholder="Contraseña">
+            </div>
+
+            <div class="register-input">
+            <label for="confirmPassword" class="register-label">Confirmar contraseña:</label>
+            <input type="password" id="confirmPassword" [(ngModel)]="confirmPassword" placeholder="Repite la contraseña">
+            </div>
+
+            <div class="register-btns">
+            <button class="register-btn-primary" (click)="register()">Registrar</button>
+            <button class="register-btn-secondary" (click)="goBack()">Regresar</button>
+            </div>
+
+            <div *ngIf="message" class="register-header" style="margin-top: 20px;">
+            <p>{{ message }}</p>
+            </div>
+    </div>
+</div>
